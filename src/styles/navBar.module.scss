@@ -1,0 +1,115 @@
+@import './layout/main.scss';
+
+.m_nav {
+  @include b1180 {
+    height: 36px;
+    width: 100%;
+    min-width: 315px;
+    position: fixed;
+    top: 0;
+    background-color: $primary;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      color: #fff;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+    img {
+      width: 100%;
+      height: 18px;
+    }
+  }
+  display: none;
+}
+.nav_container {
+  @include b1180 {
+    display: none;
+  }
+  width: 100%;
+  height: 74px;
+  background-color: $bg-gray;
+  position: fixed;
+  top: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 100%;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .navbar_sub {
+    height: 46px;
+    flex: 1 0 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
+  .navbar_sub_links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    font-size: 14px;
+    font-weight: 700;
+    div {
+      margin-left: 1.5rem;
+    }
+    .nav_select {
+      border-left: 4px solid #E0E0E0;
+      padding-left: 2rem;
+      margin: 0;
+    }
+  }
+  .navbar_bg_link {
+    background-color: #FFEDAA;
+    color: #A7814D;
+    padding: .5rem 1rem;
+    border-radius: 24px;
+  }
+  .nav_main {
+    height: 46px;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 20px;
+    button {
+      padding: 11px;
+      font-size: 28px;
+      text-align: center;
+      margin: 0 10px;
+    }
+    .person_gift, .person_name {
+      border-radius: 8px;
+      font-size: 14px;
+      height: 46px;
+      padding: 0 .8rem;
+      color: #fff;
+      margin: 0;
+    }
+    .person_name {
+      background-color: #5E4037;
+      margin-right: 0.5rem;
+    }
+    .person_gift {
+      background-color: #EA3E3E;     
+    }
+    .navItem_share {
+      font-size: 14px;
+      font-weight: 700;
+      color: #51B4AB;
+      .navItem_icon {
+        margin-right: 10px;
+      }
+      a {
+        color: $text-green;
+      }
+    }
+  }
+}

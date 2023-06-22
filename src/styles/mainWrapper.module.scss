@@ -1,0 +1,101 @@
+@import './layout/main.scss';
+
+.main_wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8px;
+  @include b1180 {
+    width: 100%;
+    display: block;
+  }
+}
+
+.wrapper_cards {
+  flex: 0 0 40%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  @include b1180 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include b770 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4px;
+  }
+}
+
+.wrapper_card {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.wrapper_card_text_content {
+  @extend %card_content;
+  height: 100%;
+  background-color: $text-green;
+  &.second_card {
+    background-color: $secondary;
+  }
+}
+
+.wrapper_img_content {
+  @include b770 {
+    display: none;
+  }
+}
+
+.wrapper_card_img {
+  @extend %card_content;
+  padding: 0;
+  background-color: #E5F4F3;
+  &.second_card {
+    background-color: #FFEDEA;
+  }
+  @include b1180 {
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      display: none;
+    }
+  }
+}
+
+.second_text_content {
+  order: 4;
+  @include b1180 {
+    order: 0;
+  }
+}
+
+.title,
+.count {
+  color: #fff;
+}
+.title {
+  font-size: 14px;
+}
+.count {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.main_wrapper_video {
+  flex: 1 0 50%;
+  min-height: 100%;
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+    @include b1180 {
+      min-height: 400px;
+    }
+  }
+  @include b1180 {
+    margin-top: 4px;
+  }
+}

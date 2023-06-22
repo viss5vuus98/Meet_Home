@@ -1,0 +1,59 @@
+.carousel_container {
+  min-height: 184px;
+  margin-top: 4rem;
+}
+.carousel_wrapper {
+  max-width: 100%;
+  overflow: hidden;
+  color: transparent;
+}
+
+.carousel_row {
+  margin-bottom: 1rem;
+  padding: 0 32px;
+  display: flex;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.carousel_card {
+  min-width: 352px;
+  border-radius: 20px;
+  padding: 16px 24px;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.carousel_card_icon {
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.carousel_card_content {
+  overflow: hidden;
+  .card_job {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .card_company {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #8e9193;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.carousel_row:last-child {
+  margin-left: 8rem;
+}
